@@ -23,6 +23,17 @@ insert into person (first_name, second_name)
     values ('Дмитрий', 'Чупов');
 insert into person (first_name, second_name)
     values ('Сергей', 'Никулов');
+insert into person (first_name, second_name)
+    values ('Василий', 'Пупкин');
+insert into person (first_name, second_name)
+    values ('Генадий', 'Букин');
+insert into person (first_name, second_name)
+    values ('Георгий', 'Слепцов');
+insert into person (first_name, second_name)
+    values ('Виктор', 'Яковлев');
+insert into person (first_name, second_name)
+    values ('Надежда', 'Меркурьева');
+
 
 -- job table
 insert into job (name)
@@ -51,6 +62,12 @@ insert into employee (job_id, person_id, airline_id)
     values (2, 4, 1);
 insert into employee (job_id, person_id, airline_id)
     values (2, 8, 1);
+insert into employee (job_id, person_id, airline_id)
+    values (1, 14, 1);
+insert into employee (job_id, person_id, airline_id)
+    values (1, 13, 1);
+insert into employee (job_id, person_id, airline_id)
+    values (2, 15, 1);
 
 -- country table
 insert into country (name)
@@ -158,9 +175,63 @@ insert into airplane (airline_id, number, model_id)
 insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
     values (1, 1, 3, 710, '2021-05-18 18:30', '2021-05-18 20:00');
 insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
-    values (2, 1, 5, 2200, '2021-05-18 17:00', '2021-05-18 20:20');
+    values (1, 3, 1, 710, '2021-05-18 22:30', '2021-05-18 23:55');
 insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
-    values (3, 2, 4, 2700, '2021-05-18 10:00', '2021-05-18 14:05');
+    values (2, 1, 5, 2200, '2021-05-18 10:00', '2021-05-18 13:20');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 5, 1, 2200, '2021-05-18 17:00', '2021-05-18 20:20');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 1, 4, 3000, '2021-05-19 06:00', '2021-05-17 10:20');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 4, 8, 5600, '2021-05-19 16:00', '2021-05-20 02:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 8, 4, 5600, '2021-05-21 10:00', '2021-05-21 19:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 4, 1, 3000, '2021-05-21 23:30', '2021-05-22 04:40');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 1, 3, 710, '2021-05-19 08:00', '2021-05-19 09:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 3, 2, 750, '2021-05-19 12:00', '2021-05-19 13:50');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 2, 6, 800, '2021-05-19 16:00', '2021-05-19 18:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 6, 2, 800, '2021-05-19 20:00', '2021-05-19 22:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 2, 11, 1800, '2021-05-20 09:30', '2021-05-20 15:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 11, 2, 1800, '2021-05-21 05:00', '2021-05-21 10:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 2, 3, 750, '2021-05-21 13:00', '2021-05-21 14:40');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 1, 7, 3000, '2021-05-22 07:00', '2021-05-22 11:20');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 7, 1, 3000, '2021-05-23 10:00', '2021-05-23 14:20');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 3, 1, 710, '2021-05-25 08:00', '2021-05-25 09:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 1, 10, 2400, '2021-05-25 12:00', '2021-05-25 15:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 10, 1, 2400, '2021-05-26 12:30', '2021-05-26 16:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (5, 1, 3, 710, '2021-05-26 20:00', '2021-05-26 21:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 1, 3, 710, '2021-05-27 12:00', '2021-05-27 13:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 3, 12, 4500, '2021-05-27 16:00', '2021-05-27 21:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (3, 12, 1, 3800, '2021-05-28 10:00', '2021-05-28 14:00');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 3, 1, 710, '2021-06-01 12:00', '2021-06-01 13:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 1, 9, 4500, '2021-06-01 16:00', '2021-06-01 20:40');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (2, 9, 1, 4500, '2021-06-02 10:00', '2021-06-02 14:40');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 1, 3, 710, '2021-06-01 12:00', '2021-06-01 13:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 3, 10, 5800, '2021-06-01 16:00', '2021-06-01 22:30');
+insert into flight (plane_id, port_dep_id, port_arr_id, distance, planned_dep_time, planned_arr_time)
+    values (4, 10, 1, 5000, '2021-06-02 10:00', '2021-06-02 15:30');
 
 
 -- ticket table
@@ -174,3 +245,187 @@ insert into tickets (flight_id, owner_id, airline_id)
     values (1, 4, 1);
 insert into tickets (flight_id, owner_id, airline_id)
     values (2, 1, 1);
+
+-- crew table
+insert into crew (flight_id, employee_id)
+    values (1, 1);
+insert into crew (flight_id, employee_id)
+    values (1, 2);
+insert into crew (flight_id, employee_id)
+    values (1, 3);
+insert into crew (flight_id, employee_id)
+    values (2, 1);
+insert into crew (flight_id, employee_id)
+    values (2, 2);
+insert into crew (flight_id, employee_id)
+    values (2, 3);
+insert into crew (flight_id, employee_id)
+    values (3, 6);
+insert into crew (flight_id, employee_id)
+    values (3, 7);
+insert into crew (flight_id, employee_id)
+    values (3, 8);
+insert into crew (flight_id, employee_id)
+    values (4, 6);
+insert into crew (flight_id, employee_id)
+    values (4, 7);
+insert into crew (flight_id, employee_id)
+    values (4, 8);
+insert into crew (flight_id, employee_id)
+    values (5, 1);
+insert into crew (flight_id, employee_id)
+    values (5, 2);
+insert into crew (flight_id, employee_id)
+    values (5, 3);
+insert into crew (flight_id, employee_id)
+    values (6, 1);
+insert into crew (flight_id, employee_id)
+    values (6, 2);
+insert into crew (flight_id, employee_id)
+    values (6, 3);
+insert into crew (flight_id, employee_id)
+    values (7, 1);
+insert into crew (flight_id, employee_id)
+    values (7, 2);
+insert into crew (flight_id, employee_id)
+    values (7, 3);
+insert into crew (flight_id, employee_id)
+    values (8, 1);
+insert into crew (flight_id, employee_id)
+    values (8, 2);
+insert into crew (flight_id, employee_id)
+    values (8, 3);
+insert into crew (flight_id, employee_id)
+    values (9, 6);
+insert into crew (flight_id, employee_id)
+    values (9, 7);
+insert into crew (flight_id, employee_id)
+    values (9, 8);
+insert into crew (flight_id, employee_id)
+    values (10, 6);
+insert into crew (flight_id, employee_id)
+    values (10, 7);
+insert into crew (flight_id, employee_id)
+    values (10, 8);
+insert into crew (flight_id, employee_id)
+    values (11, 6);
+insert into crew (flight_id, employee_id)
+    values (11, 7);
+insert into crew (flight_id, employee_id)
+    values (11, 8);
+insert into crew (flight_id, employee_id)
+    values (12, 6);
+insert into crew (flight_id, employee_id)
+    values (12, 7);
+insert into crew (flight_id, employee_id)
+    values (12, 8);
+insert into crew (flight_id, employee_id)
+    values (13, 1);
+insert into crew (flight_id, employee_id)
+    values (13, 2);
+insert into crew (flight_id, employee_id)
+    values (13, 3);
+insert into crew (flight_id, employee_id)
+    values (14, 1);
+insert into crew (flight_id, employee_id)
+    values (14, 2);
+insert into crew (flight_id, employee_id)
+    values (14, 3);
+insert into crew (flight_id, employee_id)
+    values (15, 1);
+insert into crew (flight_id, employee_id)
+    values (15, 2);
+insert into crew (flight_id, employee_id)
+    values (15, 3);
+insert into crew (flight_id, employee_id)
+    values (16, 6);
+insert into crew (flight_id, employee_id)
+    values (16, 7);
+insert into crew (flight_id, employee_id)
+    values (16, 8);
+insert into crew (flight_id, employee_id)
+    values (17, 6);
+insert into crew (flight_id, employee_id)
+    values (17, 7);
+insert into crew (flight_id, employee_id)
+    values (17, 8);
+insert into crew (flight_id, employee_id)
+    values (18, 1);
+insert into crew (flight_id, employee_id)
+    values (18, 2);
+insert into crew (flight_id, employee_id)
+    values (18, 3);
+insert into crew (flight_id, employee_id)
+    values (19, 1);
+insert into crew (flight_id, employee_id)
+    values (19, 2);
+insert into crew (flight_id, employee_id)
+    values (19, 3);
+insert into crew (flight_id, employee_id)
+    values (20, 1);
+insert into crew (flight_id, employee_id)
+    values (20, 2);
+insert into crew (flight_id, employee_id)
+    values (20, 3);
+insert into crew (flight_id, employee_id)
+    values (21, 1);
+insert into crew (flight_id, employee_id)
+    values (21, 2);
+insert into crew (flight_id, employee_id)
+    values (21, 3);
+insert into crew (flight_id, employee_id)
+    values (22, 6);
+insert into crew (flight_id, employee_id)
+    values (22, 7);
+insert into crew (flight_id, employee_id)
+    values (22, 8);
+insert into crew (flight_id, employee_id)
+    values (23, 6);
+insert into crew (flight_id, employee_id)
+    values (23, 7);
+insert into crew (flight_id, employee_id)
+    values (23, 8);
+insert into crew (flight_id, employee_id)
+    values (24, 6);
+insert into crew (flight_id, employee_id)
+    values (24, 7);
+insert into crew (flight_id, employee_id)
+    values (24, 8);
+insert into crew (flight_id, employee_id)
+    values (25, 1);
+insert into crew (flight_id, employee_id)
+    values (25, 2);
+insert into crew (flight_id, employee_id)
+    values (25, 3);
+insert into crew (flight_id, employee_id)
+    values (26, 1);
+insert into crew (flight_id, employee_id)
+    values (26, 2);
+insert into crew (flight_id, employee_id)
+    values (26, 3);
+insert into crew (flight_id, employee_id)
+    values (27, 1);
+insert into crew (flight_id, employee_id)
+    values (27, 2);
+insert into crew (flight_id, employee_id)
+    values (27, 3);
+insert into crew (flight_id, employee_id)
+    values (28, 6);
+insert into crew (flight_id, employee_id)
+    values (28, 7);
+insert into crew (flight_id, employee_id)
+    values (28, 8);
+insert into crew (flight_id, employee_id)
+    values (29, 6);
+insert into crew (flight_id, employee_id)
+    values (29, 7);
+insert into crew (flight_id, employee_id)
+    values (29, 8);
+insert into crew (flight_id, employee_id)
+    values (30, 6);
+insert into crew (flight_id, employee_id)
+    values (30, 7);
+insert into crew (flight_id, employee_id)
+    values (30, 8);
+
+

@@ -1,31 +1,3 @@
 set search_path = air_travels;
 
-delete from airline;
-delete from airline_ban_list;
-delete from airplane;
-delete from airplane_model;
-delete from airport;
-delete from airport_ban_list;
-delete from city;
-delete from country;
-delete from crew;
-delete from employee;
-delete from flight;
-delete from job;
-delete from person;
-delete from tickets;
-
-drop table airline;
-drop table airline_ban_list;
-drop table airplane;
-drop table airplane_model;
-drop table airport;
-drop table airport_ban_list;
-drop table city;
-drop table country;
-drop table crew;
-drop table employee;
-drop table flight;
-drop table job;
-drop table person;
-drop table tickets;
+drop schema air_travels cascade;
