@@ -67,3 +67,7 @@
 ## Визуальная картина в ER-нотации
 
 ![ER-model](images/er-model.png)
+
+## Диаграмма таблиц
+
+![Diagramm](images/diagram.png)
