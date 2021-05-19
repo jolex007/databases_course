@@ -73,9 +73,9 @@ create table if not exists airplane (
 
 create table if not exists flight (
     flight_id           serial  primary key
-    , plane_id          bigint  not null
-    , port_dep_id       bigint  not null
-    , port_arr_id       bigint  not null
+    , plane_id          bigint  not null  references "airplane"(plane_id)
+    , port_dep_id       bigint  not null  references "airport"(airport_id)
+    , port_arr_id       bigint  not null  references "airport"(airport_id)
     , distance          bigint  not null
     , planned_dep_time  time    not null
     , planned_arr_time  time    not null
