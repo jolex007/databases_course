@@ -4,7 +4,7 @@ set search_path = air_travels;
 
 create table if not exists airline (
     airline_id          serial  primary key
-    , name              text    not null unique
+    , name              text    not null  unique
 );
 
 create table if not exists person (
@@ -16,25 +16,25 @@ create table if not exists person (
 
 create table if not exists job (
     job_id              serial  primary key 
-    , name              text    not null unique
+    , name              text    not null  unique
 );
 
 create table if not exists employee (
     employee_id         serial  primary key 
-    , job_id            bigint  not null references "job"(job_id)
-    , person_id         bigint  not null references "person"(person_id)
-    , airline_id        bigint  not null references "airline"(airline_id)
+    , job_id            bigint  not null  references "job"(job_id)
+    , person_id         bigint  not null  references "person"(person_id)
+    , airline_id        bigint  not null  references "airline"(airline_id)
 );
 
 create table if not exists airline_ban_list (
-    airline_id          serial  not null references "airline"(airline_id)
-    , person_id         serial  not null references "person"(person_id)
+    airline_id          bigint  not null  references "airline"(airline_id)
+    , person_id         bigint  not null  references "person"(person_id)
     , primary key (airline_id, person_id)
 );
 
 create table if not exists country (
     country_id          serial  primary key
-    , name              text  not null unique
+    , name              text    not null  unique
 );
 
 create table if not exists city (
@@ -47,28 +47,28 @@ create table if not exists city (
 create table if not exists airport (
     airport_id          serial  primary key 
     , name              text    not null 
-    , city_id           bigint  not null references "city"(city_id)
+    , city_id           bigint  not null  references "city"(city_id)
     , unique (name, city_id)
 );
 
 create table if not exists airport_ban_list (
-    airport_id          serial  not null
-    , person_id         serial  not null references "person"(person_id)
+    airport_id          bigint  not null
+    , person_id         bigint  not null  references "person"(person_id)
     , unique (airport_id, person_id)
 );
 
 create table if not exists airplane_model (
     model_id            serial  primary key 
-    , name              text    not null unique
+    , name              text    not null  unique
     , seats_num         int     not null 
     , flight_distance   int     not null 
 );
 
 create table if not exists airplane (
     plane_id            serial  primary key 
-    , airline_id        bigint  not null references "airline"(airline_id)
-    , number            text  unique  not null
-    , model_id          bigint  not null references "airplane_model"(model_id)
+    , airline_id        bigint  not null  references "airline"(airline_id)
+    , number            text    unique  not null
+    , model_id          bigint  not null  references "airplane_model"(model_id)
 );
 
 create table if not exists flight (
@@ -90,8 +90,8 @@ create table if not exists tickets (
 );
 
 create table if not exists crew (
-    flight_id           serial  not null  references "flight"(flight_id)
-    , employee_id       serial  not null  references "employee"(employee_id)
+    flight_id           bigint  not null  references "flight"(flight_id)
+    , employee_id       bigint  not null  references "employee"(employee_id)
     , unique (flight_id, employee_id)
 );
 
